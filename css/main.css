@@ -157,6 +157,7 @@ main#home h1 {
   background: #2b2b2b;
   color: #fff;
   height: 60px;
+  width: auto;
 }
 
 /*Video Parts in Projects*/
