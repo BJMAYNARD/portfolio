@@ -162,8 +162,8 @@ main#home h1 {
 
 /*Video Parts in Projects*/
 .viewport img {
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   opacity: 1;
 }
 .viewport {
