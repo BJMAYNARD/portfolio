@@ -35,18 +35,13 @@
 /* Main Body*/
 
 body {
-  background: rgb(36, 35, 35);
-  color: white;
+  background-colr: grey;
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
-body#bg-img {
-  background: url(/img/coding.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-}
+
 
 h1,
 h2,
