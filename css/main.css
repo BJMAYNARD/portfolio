@@ -10,7 +10,261 @@
 
 .navbar a {
   font-size: x-large;
+  color: #b22222;/* Nav Menu Functions*/
+.navbar {
+  display: flex;
+  background-color: #000000;
+  white-space: prewrap;
+  max-width: 100%;
+  overflow: auto;
+  position: relative;
+}
+
+.navbar a {
+  font-size: x-large;
   color: #b22222;
+  padding: 40px;
+  text-decoration: none;
+  float: left;
+  text-align: left;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: #000000;
+}
+
+@media screen and (min-width: 500px) {
+  .navbar {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Main Body*/
+
+  body {
+    height: 100%;
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+  }
+  body#bg-img {
+    background: url(../img/coding.jpg);
+    background: rgba(68, 68, 68, 0.9), url(../img/coding.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    font-weight: 400;
+  }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 6rem;
+  }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(99, 98, 98, 0.5);
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+  }
+
+  main {
+    padding: 4rem;
+    min-height: calc(65vh - 60px);
+  }
+  .icons {
+    margin-top: 1rem;
+  }
+  .icons a {
+    padding: 0.4rem;
+  }
+  .icons a:hover {
+    color: #b60b0b;
+    transition: all 0.5s ease-out;
+  }
+  main#home {
+    overflow: hidden;
+  }
+  main#home h1 {
+    margin-top: 20vh;
+  }
+
+  .about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: "bioimage bio bio";
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .about-info .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: #150241 3px solid;
+  }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+
+  /* Projects Page*/
+
+  .projects {
+    display: grid;
+    grid-gap: 0.7rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .projects img {
+    width: 100%;
+    border: 3px #fff solid;
+  }
+
+  .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #2b2b2b solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .btn-dark,
+  .btn-light {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+  }
+
+  .btn-dark:hover {
+    background: #b60b0b;
+    color: #000;
+  }
+
+  .btn-dark {
+    background: black;
+    color: #fff;
+  }
+
+  .btn-light {
+    background: #c4c4c4;
+    color: #333;
+  }
+
+  #main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: #2b2b2b;
+    color: #fff;
+    height: 60px;
+    width: auto;
+  }
+
+  /*Video Parts in Projects*/
+  .viewport img {
+    height: 300px;
+    width: 300px;
+    opacity: 1;
+  }
+  .viewport {
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+
+  .viewport:hover img {
+    opacity: 0;
+  }
+
+  .viewport:hover video {
+    opacity: 1;
+  }
+
+  .fade {
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  video {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+  }
+
+  /* Help with Screen Sizes*/
+
+  @media screen and (min-width: 1171px) {
+    .projects {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    .projects {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    main {
+      align-items: center;
+      text-align: center;
+    }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .about-info {
+      grid-template-areas: "bioimage" "bio";
+      grid-template-columns: 1fr;
+    }
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    main {
+      padding: 2rem;
+    }
+    main #home h1 {
+      margin-top: 10vh;
+    }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem;
+    }
+    .projects {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
   padding: 40px;
   text-decoration: none;
   float: left;
