@@ -1,9 +1,11 @@
 /* Nav Menu Functions*/
 .navbar {
-  display: center;
+  display: flex;
   background-color: #000000;
   white-space: prewrap;
   max-width: 100%;
+  overflow: auto;
+  position: relative;
 }
 
 .navbar a {
@@ -11,12 +13,24 @@
   color: #b22222;
   padding: 40px;
   text-decoration: none;
+  float: left;
+  text-align: left;
+  
 }
 
 .navbar a:hover {
-  background-color: #ffffff;
+  background-color: #ddd;
   color: #000000;
 }
+
+@media screen and (max-width: 500px) {
+  .navbar {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
 
 /* Main Body*/
 
