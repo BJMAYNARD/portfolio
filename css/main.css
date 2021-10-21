@@ -31,8 +31,8 @@ body {
   line-height: 1.5;
 }
 body#bg-img {
-  background: url(../img/coding.jpg);
-  background: rgba(68, 68, 68, 0.9), url(../img/coding.jpg);
+  background: url(../img//projects/coding.jpg);
+  background: rgba(68, 68, 68, 0.9), url(../img/projects/coding.jpg);
   background-attachment: fixed;
   background-size: cover;
 }
