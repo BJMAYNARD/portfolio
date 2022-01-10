@@ -9,8 +9,9 @@
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
+      
     />
-
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css" />
     <title>My Projects</title>
   </head>
@@ -34,22 +35,28 @@
     <main id="work">
       <h1 class="lg-heading">My Projects</h1>
       <h2 class="sm-heading">
-        Check out some of my projects...more coming soon
+        Check out some of my projects. More Coming Soon -- In the meantime - when the video demo comes up -- double-click on it to view a larger video.
       </h2>
+      <div class="work-about">
       <div class="projects">
-        <div class="image">
-          <a>
-            <img src="img/projects/project1.jpg" alt="Project" />
-          </a>
-          <a class="btn-light"> <i class="fas fa-eye"></i> First Website </a>
-          <a
-            href="https://tractorservice.netlify.app"
-            target="_blank"
-            class="btn-dark"
-          >
-            First website I built from scratch with HTML and CSS
-          </a>
-        </div>
+        <div class="viewport">
+          
+          <img class="fade" src="/img/projects/web.jpg"/>
+          <video id="video" class="fade" controls="controls" loop>
+            <source src="/img/projects/nodejs.webm" type="video/webm" />
+          </video>
+      
+        <a class="btn-light">
+          <i class="fas fa-eye"></i> Node.JS Website Scraper
+        </a>
+        <a
+          href="https://github.com/BJMAYNARD/Scraper"
+          target="_blank"
+          class="btn-dark"
+        >
+        <i class="fab fa-github"></i> Github Has The Code
+        </a>
+      </div>
         <div class="viewport">
           
             <img class="fade" src="/img/projects/security.jpg"/>
@@ -83,7 +90,7 @@
             target="_blank"
             class="btn-dark"
           >
-            <i class="fab fa-github"></i> Github
+            <i class="fab fa-github"></i> Github Has The Code
           </a>
         </div>
         <div class="viewport">
@@ -105,9 +112,10 @@
           </a>
         </div>
       </div>
+    </div>
     </main>
 
-    <footer id="main-footer">
+   <footer id="main-footer">
       Copyright &copy; 2021
       <div class="icons">
         <a href="https://www.linkedin.com/in/bj-maynard/" target="_blank">
@@ -117,8 +125,10 @@
           <i class="fab fa-github fa-2x"></i>
         </a>
       </div>
-    </footer>
+
+   </footer>
+  </body>
 
     <script src="js/main.js"></script>
-  </body>
+  
 </html>

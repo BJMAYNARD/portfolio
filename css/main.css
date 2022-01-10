@@ -3,7 +3,7 @@
   display: flex;
   background-color: grey;
   white-space: prewrap;
-  max-width: 100%;
+  max-width: auto;
   overflow: auto;
   position: relative;
 }
@@ -72,18 +72,9 @@ header {
 
 main {
   padding: 2rem;
-  min-height: calc(55vh - 60px);
+  min-height: calc(10vh - 20px);
 }
-.icons {
-  margin-top: 1rem;
-}
-.icons a {
-  padding: 0.4rem;
-}
-.icons a:hover {
-  color: #b60b0b;
-  transition: all 0.5s ease-out;
-}
+
 main#home {
   overflow: hidden;
 }
@@ -106,9 +97,10 @@ main#work {
   grid-template-columns: repeat(3, 1fr);
 }
 .about-info .bio-image {
-  grid-area: bioimage;
-  margin: auto;
-  border-radius: 50%;
+
+  grid-area:auto;
+  margin:auto;
+  border-radius: 30%;
   border: #150241 3px solid;
 }
 .about-info .bio {
@@ -118,23 +110,32 @@ main#work {
 }
 
 /* Projects Page*/
+.work-about{
+  display: grid;
+ 
 
+}
 .projects {
   display: grid;
-  grid-gap: 0.7rem;
-  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 5rem;
+  grid-area:auto;
+  margin:auto;
+  grid-template-columns: repeat(4, 1fr);
+
+ 
 }
 .projects img {
-  width: 100%;
-  border: 3px #fff solid;
+  width: auto;
+  border: 5px rgb(150, 6, 6) solid;
 }
 
 .boxes {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-evenly;
   align-items: center;
   margin-top: 1rem;
+ 
 }
 .boxes div {
   font-size: 2rem;
@@ -145,10 +146,11 @@ main#work {
 
 .btn-dark,
 .btn-light {
-  display: block;
+  display: flex;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
+  
 }
 
 .btn-dark:hover {
@@ -165,14 +167,27 @@ main#work {
   background: #c4c4c4;
   color: #333;
 }
-
+/*Footer*/
 #main-footer {
   text-align: center;
-  padding: 1rem;
+  padding: 10px 10px 0px 10px;
   background: #2b2b2b;
   color: #fff;
-  height: 60px;
-  width: auto;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+#main-footer .icons {
+  margin-top: .1rem;
+}
+#main-footer .icons a {
+  padding: 0.4rem;
+}
+#main-footer .icons a:hover {
+  color: #b60b0b;
+  transition: all 0.5s ease-out;
 }
 
 /*Video Parts in Projects*/
@@ -209,17 +224,6 @@ video {
 
 /* Help with Screen Sizes*/
 
-@media screen and (min-width: 1171px) {
-  .projects {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1170px) {
-  .projects {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 
 @media screen and (max-width: 768px) {
   .navbar {
@@ -228,11 +232,27 @@ video {
     width: 100%;
     text-align: left;
   }
-  main {
+  #main-home{
     align-items: center;
     text-align: center;
   }
-  main .lg-heading {
+  #main-about{
+    align-items: center;
+    text-align: center;
+  }
+  #main-work{
+    align-items: center;
+    text-align: center;
+  }
+  #main-home .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  #main-about .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  #main-work .lg-heading {
     line-height: 1;
     margin-bottom: 1rem;
   }
@@ -241,30 +261,68 @@ video {
     grid-template-areas: "bioimage" "bio";
     grid-template-columns: 1fr;
   }
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
+  
+}
 @media screen and (max-width: 500px) {
-  .navbar {
-    float: none;
-    display: block;
-    width: 100%;
-    text-align: left;
+    .navbar {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+    #main-home{
+      align-items: center;
+      text-align: center;
+    }
+    #main-about{
+      align-items: center;
+      text-align: center;
+    }
+    #main-work{
+      align-items: center;
+      text-align: center;
+    }
+    #main-home .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    #main-about .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    #main-work .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+  .viewport img {
+    height: 200px;
+    width: 200px;
+    opacity: 1;
   }
-  main {
-    padding: 2rem;
+  .viewport {
+    position: relative;
+    width: 200px;
+    height: 200px;
   }
-  main #home h1 {
-    margin-top: 10vh;
+  
+  .viewport:hover img {
+    opacity: 0;
   }
-  main .lg-heading {
-    margin-top: 1rem;
-    font-size: 5rem;
+  
+  .viewport:hover video {
+    opacity: 1;
   }
-  .projects {
-    grid-template-columns: auto;
+  
+  .fade {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  video {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    opacity: 0;
   }
 }
-
