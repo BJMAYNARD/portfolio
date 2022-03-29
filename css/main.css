@@ -170,7 +170,7 @@ main#work {
 
 
 .viewport:hover img {
-  opacity: 0;
+  opacity: .6;
 }
 
 .viewport:hover video {
